@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('book_name')->unique();
+            $table->string('book_name');
             $table->integer('book_category_id');
             $table->integer('author_id');
             $table->timestamps();
