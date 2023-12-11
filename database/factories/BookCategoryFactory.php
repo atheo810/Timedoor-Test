@@ -18,7 +18,7 @@ class BookCategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'category_name' => fake()->word()
+            'category_name' => fake()->sentence()
         ];
     }
     protected $model = BookCategory::class;
