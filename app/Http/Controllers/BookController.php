@@ -13,4 +13,10 @@ class BookController extends Controller
         $books = Book::paginate($id);
         return view('home', compact('books'));
     }
+    public function pagination(Request $request)
+    {
+
+        $books = Book::paginate($request->id);
+        return view('home', compact('books'));
+    }
 }
