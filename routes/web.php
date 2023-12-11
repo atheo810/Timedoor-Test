@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', [BookController::class, 'index']);
+Route::get('/pagination/{id}', [BookController::class, 'index']);
+
+
+Route::get('/vote', function () {
+    return view('votes');
+});
+Route::get('/famous', function () {
+    return view('famousAuthor');
 });
