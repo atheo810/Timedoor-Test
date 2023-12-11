@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\Vote;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,7 @@ Route::get('/', [BookController::class, 'index']);
 Route::get('/pagination', [BookController::class, 'pagination']);
 
 
-Route::get('/vote', function () {
-    return view('votes');
-});
+Route::get('/vote', [Vote::class, 'show']);
 Route::get('/famous', function () {
     return view('famousAuthor');
 });
