@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\author;
 use App\Models\Book;
 use App\Models\BookCategory;
+use App\Models\Rating;
 use Database\Factories\AuthorFactory;
 use Illuminate\Database\Seeder;
 
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
 
         author::factory(1000)->create();
         BookCategory::factory(3000)->create();
-        Book::factory(100)->create();
+        Book::factory(1000)->create();
+        Rating::factory(500)->create();
     }
 }
