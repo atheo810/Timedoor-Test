@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [BookController::class, 'index']);
-Route::get('/pagination/{id}', [BookController::class, 'index']);
+Route::get('/pagination', [BookController::class, 'pagination']);
 
 
 Route::get('/vote', function () {
